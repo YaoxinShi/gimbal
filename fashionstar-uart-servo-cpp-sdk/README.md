@@ -43,3 +43,21 @@ msbuild UART_DEMO.sln /p:Configuration=Debug /p:Platform="x64"
 cmake --build . --target INSTALL --config Debug
 ```
 
+```
+cd C:\ws\code\gimbal\fashionstar-uart-servo-cpp-sdk\example\servo_set_angle\
+# modify CMakeLists.txt: SET(CMAKE_INSTALL_PREFIX "c:/ws/tmp/CPP_LIBRARIES/")
+# modify servo_set_angle.cpp: #define SERVO_PORT_NAME "COM5" 
+rmdir /s /q build
+mkdir build
+cd build
+cmake ..
+msbuild SERVO_QUERY_ANGLE.sln /p:Configuration=Debug /p:Platform="x64"
+cmake --build . --target INSTALL --config Debug
+```
+
+```
+cd C:\ws\tmp\CPP_LIBRARIES\bin\
+servo_set_angle.exe
+```
+
+

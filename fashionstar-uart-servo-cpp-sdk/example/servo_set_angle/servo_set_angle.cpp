@@ -14,7 +14,7 @@
 // 总线伺服舵机配置
 // 设置总线伺服Servo转接板的端口号
 #ifdef _WIN32
-#define SERVO_PORT_NAME "COM8" 	        // Windows下端口号名称 COM{}
+#define SERVO_PORT_NAME "COM5" 	        // Windows下端口号名称 COM{}
 #else
 #define SERVO_PORT_NAME "/dev/ttyUSB0" 	// Linux下端口号名称 /dev/ttyUSB{}
 #endif

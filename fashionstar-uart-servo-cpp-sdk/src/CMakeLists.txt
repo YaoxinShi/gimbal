@@ -8,7 +8,11 @@ set(LIB_NAME fsuartservo)
 set(LIB_SRC ./FashionStar_UartServoProtocol.cpp ./FashionStar_UartServo.cpp)
 
 add_library(${LIB_NAME} SHARED ${LIB_SRC})
-target_link_libraries(${LIB_NAME} cserialport)
+if(CMAKE_HOST_WIN32)
+    target_link_libraries(${LIB_NAME} libcserialport)
+elseif(CMAKE_HOST_UNIX)
+    target_link_libraries(${LIB_NAME} cserialport)
+endif()
 
 # 安装动态链接库
 install(

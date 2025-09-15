@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<mainmenu>
+    <menu label="Label.File" name="FileMenu">
+      <button label="Label.Close" click="Close" shortcut="Control|W" image="275|4|5|4" flags="Disable:IsDocEmpty" />
+      <button label="Label.CloseOthers" click="CloseOthers" shortcut="Control|Shift|W" flags="Disable:IsDocEmpty" />
+      <button label="Label.CloseAll" click="CloseAll" shortcut="Control|Shift|V" flags="Disable:IsDocEmpty" />
+      <separator />
+      <button label="Label.Exit" click="Exit" />
+    </menu>
+    <menu label="Label.View" name="ViewMenu">
+        <button label="Label.FullScreen" click="ToggleFullScreen" shortcut="Shift|Alt|Enter" flags="Check:IsFullScreen" />
+        <button label="Label.SplitView" click="ToggleSplitView" shortcut="Control|Shift|Enter" flags="Disable:IsDocEmpty+Check:IsSplitted" />
+        <separator />
+    </menu>
+    <menu label="Label.Tools" name="ToolsMenu">
+        <button label="Label.ProgramSettings" click="ShowSettings" image="54" />
+    </menu>
+    <menu label="Label.Help" name="HelpMenu">
+        <button label="Label.About" click="About" image="229" />
+    </menu>
+</mainmenu>

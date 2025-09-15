@@ -66,4 +66,11 @@ int main(){
     t_dec = 100;
     servo0.setRawAngleByVelocity(-90, velocity, t_acc, t_dec, 0);
     waitAndReport(&servo0);
+
+	cout << "Set Angle = 0 deg - Set Velocity = 200 dps" << endl;
+    velocity = 200.0;
+    t_acc = 100;
+    t_dec = 100;
+    servo0.setRawAngleByVelocity(0, velocity, t_acc, t_dec, 0);
+    waitAndReport(&servo0);
 }
